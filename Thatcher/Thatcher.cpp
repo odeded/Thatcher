@@ -5,8 +5,11 @@
 #include "Types.h"
 #include "WinHelper.h"
 
+
 int main()
 {
+
+
 	smartHandle hhh = makeSmartHandle( 
 		CreateFile(L"vsvds",               // file name 
 		GENERIC_READ,          // open for reading 

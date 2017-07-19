@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)externals\openssl\inc$(PlatformArchitecture);$(SolutionDir)externals\liboauth\src;$(SolutionDir)externals\curl\third-party\libcurl\include;$(SolutionDir)externals\jansson\src;$(SolutionDir)externals\Dropbox-C\Dropbox\include;$(SolutionDir)externals\Dropbox-C\memStream\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)externals\openssl\out$(PlatformArchitecture);$(SolutionDir)externals\curl\third-party\libcurl\lib\static-$(Configuration)-x$(PlatformArchitecture);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ssleay32.lib;libeay32.lib;libcurl_a.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>
